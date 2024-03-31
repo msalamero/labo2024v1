@@ -104,6 +104,8 @@ dataset[, .N, clase_ternaria]
 dataset[,clase_binaria1:=ifelse(clase_ternaria=="BAJA+2","pos","neg")]
 #verifico las cantidades
 dataset[, .N, clase_binaria1]
+#borro la ternaria originlal
+dataset[, clase_ternaria:=NULL]
 
 # genero el archivo para Kaggle
 # creo la carpeta donde va el experimento
